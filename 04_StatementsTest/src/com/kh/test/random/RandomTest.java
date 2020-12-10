@@ -41,42 +41,14 @@ public class RandomTest {
 		}
 		System.out.println("====================");
 		
-		if(num == 1) {
+		if((num == 1 && rps == 3 ) || (num == 2 && rps == 1) || (num == 3 && rps == 2)) {
+			System.out.println("당신이 이겼습니다. ㅠ.ㅠ");
 			
+		} else if ((num == 1 && rps == 1 ) || (num == 2 && rps == 2) || (num == 3 && rps == 3)) {
+			System.out.println("비겼습니다. ㅠ.ㅠ");
+			
+		} else if ((num == 1 && rps == 2 ) || (num == 2 && rps == 3) || (num == 3 && rps == 1)) {
+			System.out.println("당신은 졌습니다. ㅠ.ㅠ");
 		}
 	}
 }
-//		if (num == 1 && rps == 3) {
-//			System.out.println("당신을 가위를 냈습니다.");
-//			System.out.println("컴퓨터는 보를 냈습니다.");
-//			System.out.println("====================");
-//			System.out.println("당신이 이겼습니다. ㅠ.ㅠ");
-//			
-//		} else if (num == 1 && rps == 2) {
-//			System.out.println("당신을 가위를 냈습니다.");
-//			System.out.println("컴퓨터는 바위를 냈습니다.");
-//			System.out.println("====================");
-//			System.out.println("비겼습니다. ㅠ.ㅠ");
-//			
-//			
-//			
-//			
-//		} else if (num == 1 && rps == 1) {
-//			System.out.println("당신을 가위를 냈습니다.");
-//			System.out.println("컴퓨터는 가위를 냈습니다.");
-//			System.out.println("====================");
-//			System.out.println("비겼습니다. ㅠ.ㅠ");
-//			
-//		} else if (num == 2 && rps == 1) {
-//			System.out.println("당신을 바위를 냈습니다.");
-//			System.out.println("컴퓨터는 가위를 냈습니다.");
-//			System.out.println("====================");
-//			System.out.println("당신이 이겼습니다. ㅠ.ㅠ");
-//			
-//		} else if (num == 2 && rps == 3) {
-//			System.out.println("당신을 바위를 냈습니다.");
-//			System.out.println("컴퓨터는 가위를 냈습니다.");
-//			System.out.println("=====================");
-//			System.out.println("비겼습니다. ㅠ.ㅠ");
-//			
-	
