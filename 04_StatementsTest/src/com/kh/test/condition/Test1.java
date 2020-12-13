@@ -67,5 +67,9 @@ public class Test1 {
 		} else {
 			System.out.println("홀수다");
 		}
+//		boolean bool = (num%2==0);
+//		if(bool) System.out.println("짝수다.");
+//		else System.out.println("홀수다.");
+		//boolean 형으로 도 가능
 	}
 }

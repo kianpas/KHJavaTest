@@ -17,7 +17,7 @@ public class Test9 {
 		System.out.println("e. 디버거 ---------7000");
 		System.out.println("***********************\n");
 		
-		System.out.println("******사이드메뉴*********");
+		System.out.println("*******사이드메뉴********");
 		System.out.println("1. 콜라 ---------1500");
 		System.out.println("2. 사이다 ---------1500");
 		System.out.println("3. 밀크쉐이크 ---------2500");
@@ -29,6 +29,7 @@ public class Test9 {
 		
 		char ch = sc.next().charAt(0);
 		int num = sc.nextInt();
+		
 		String mm = ch == 'a' ? "불고기버거" : (ch == 'b' ? "새우버거" : (ch == 'c'? "치킨버거" : (ch == 'd'? "한우버거":"디버거")));
 		int mp = ch == 'a' ? 5000 : (ch == 'b' ? 4000 : (ch == 'c'? 4500 : (ch == 'd'? 10000:7000)));
 		
@@ -82,9 +83,8 @@ public class Test9 {
 //			break;
 //		
 //		} 
-//		String result = num == 1 ? "가위" : (num == 2 ? "바위" : num == 3? "바위" : "다람쥐");
 //		System.out.println(result);
-//		if ((ch>='a'&& ch <='e') && (num>0 && num <5)) {
+//		if ((ch>='a'&& ch <='e') && (num > 0 && num < 5)) {
 //			System.out.println(mm + ", " + sm + "은(는) 총 " + (mp+sp) + "원입니다");
 //			} else {
 //				System.out.println("번호를 잘못 누르셨습니다. 영업을 종료합니다");

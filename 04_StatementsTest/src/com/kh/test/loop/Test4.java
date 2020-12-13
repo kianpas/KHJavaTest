@@ -18,7 +18,7 @@ public class Test4 {
 		String str = sc.nextLine();
 		
 		System.out.print("검색할 문자 입력 : ");
-		char ch = sc.next().charAt(0);
+		char ch = sc.next().charAt(0); //여기서 0은 위치 말하는 것
 		
 		int index = 0;
 		//length가 5라면 위치는 4		
@@ -27,7 +27,7 @@ public class Test4 {
 				index++; // 무한 제어
 			} 
 		}
-		if ('a' <=ch && ch <= 'z') {
+		if (('a' <=ch && ch <= 'z')||('A' <= ch && ch <= 'Z')) {
 			System.out.println("'" + ch + "'" + "가 포함된 갯수 : " + index + "개");
 		} else {
 			System.out.println("영문자가 아닙니다.");
