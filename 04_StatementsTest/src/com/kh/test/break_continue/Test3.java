@@ -7,7 +7,33 @@ public class Test3 {
 	public static void main(String[] args) {
 		
 		Test3 t4 = new Test3();
-		t4.test();
+		//t4.test();
+		t4.test1();
+	}
+
+	public void test1() {
+		
+		Scanner sc = new Scanner(System.in);
+		int num;
+		
+		for(int i = 0; ; i++) {
+			System.out.print("숫자 입력 : ");
+			num = sc.nextInt();
+			if(num>2)
+				break;
+			else
+				System.out.println("잘못 입력하셨습니다. 다시 입력하세요.");
+				continue;
+		}
+		for(int i = 2; ; i++) {
+			if(num % 2 != 0) {
+				System.out.println("소수다.");
+				break;
+			} else 
+				System.out.println("소수가 아니다");
+				break;
+			
+		}
 	}
 
 	public void test() {
