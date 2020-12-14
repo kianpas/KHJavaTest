@@ -8,6 +8,7 @@ public class Test1 {
 		
 		Test1 t1 = new Test1();
 		t1.test1();
+		System.out.println();
 		t1.test2();
 	}
 
@@ -59,19 +60,19 @@ public class Test1 {
 		Scanner sc = new Scanner(System.in);
 		
 		int num = sc.nextInt();
-		int sum = 0;
+		int sum = 1;
 	
-		for(int i = 0; i <= num; i++) {
+		for(int i = 1; i <= num; i++) {
 			if(i % 2 != 0)
-				sum += i;
+				sum *= i;
 			
 		 }System.out.println(sum);
 		 
-		int sum2 = 0;
-		int i2 = 0;
+		int sum2 = 1;
+		int i2 = 1;
 		while(i2<=num) {
 			if(i2 % 2 != 0) 
-				sum2 += i2;
+				sum2 *= i2;
 			i2++; //1 증가는 나중에
 			
 		}System.out.println(sum2);
