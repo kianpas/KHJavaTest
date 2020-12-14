@@ -6,12 +6,42 @@ public class Test3 {
 
 	public static void main(String[] args) {
 		
-		Test3 t4 = new Test3();
-		//t4.test();
-		t4.test1();
+		Test3 t3 = new Test3();
+		//t3.test();
+		//t3.test2();
+		t3.test3();
 	}
 
-	public void test1() {
+	public void test3() {
+Scanner sc = new Scanner(System.in);
+		
+		int num;
+		
+		do {
+			System.out.print("숫자 입력 : ");
+			num = sc.nextInt();
+			
+			if(num < 2) {
+				System.out.println("잘못 입력하셨습니다. 다시 입력하세요.");
+					continue;
+			}
+			
+			int i = 1;
+			while(i < num) {
+					i++;
+				if(num % 2 != 0) {
+					System.out.println(num + "은 소수다.");
+					break;
+				}else 					
+					System.out.println(num + "은 소수아니다.");
+					break;
+			}	break;
+			
+		} while(true);
+		
+	}
+
+	public void test2() {
 		
 		Scanner sc = new Scanner(System.in);
 		int num;
@@ -65,14 +95,6 @@ public class Test3 {
 	
 		
 		
-//		for(int i = 1; i<=num; i++) { //중간에 빈 경우는 무한 반복 
-//			if(num % 2 != 0) {				
-//				System.out.println("소수 입니다.");
-//					break;		//for 에서는 증감식으로 돌아감
-//			}else 
-//				System.out.println("소수 아닙니다.");
-//					break;
-//		}
 
 	
 
