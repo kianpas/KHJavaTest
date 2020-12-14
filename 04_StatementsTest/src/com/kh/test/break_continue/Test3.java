@@ -13,7 +13,7 @@ public class Test3 {
 	}
 
 	public void test3() {
-Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
 		int num;
 		
