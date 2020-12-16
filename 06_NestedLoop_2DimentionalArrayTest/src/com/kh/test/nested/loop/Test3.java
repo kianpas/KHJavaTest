@@ -21,17 +21,17 @@ public class Test3 {
 			System.out.println("양수가 아닙니다");
 		}
 		for (int i = 0; i < num; i++) { // 행
-			for (int j = 0; j < i + 1; j++) { // 열 감소 0열
+			for (int j = 0; j < i + 1; j++) { // 열
 				System.out.print("*");
 			}
 			System.out.println();
 		}
 		for (int k = 0; k < num - 1; k++) { // 행
-			for (int j = 0; j < k + 1; j++) { // 열 감소 0열
+			for (int j = 0; j < k + 1; j++) { // 열
 				System.out.print(" ");
 			}
 
-			for (int j = 0; j < num - (k + 1); j++) { // 열 감소 0열
+			for (int j = 0; j < num - (k + 1); j++) { // 열
 				System.out.print("*");
 
 			}
