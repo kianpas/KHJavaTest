@@ -146,7 +146,7 @@ public class Employee {
 		bonusPoint = sc.nextDouble();
 		
 		System.out.print("9. 핸드폰 입력 : ");
-		phone = sc.nextLine();
+		phone = sc.next();
 		
 		sc.nextLine();
 		
