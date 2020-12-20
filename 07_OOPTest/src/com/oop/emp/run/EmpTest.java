@@ -30,6 +30,12 @@ public class EmpTest {
 	}
 	
 	public void mainMenu() {
+		//올바른 답은 emp의 선언과 생성을 따로 하는 것
+		//따로 할 수도 있다.
+		//ex) Employee emp = null; 
+		//emp = new Employee(); 식으로
+		//삭제 시 emp = null;
+		
 		Employee emp = new Employee();
 		Scanner sc = new Scanner(System.in);
 			
@@ -41,7 +47,7 @@ public class EmpTest {
 					+"*******************************";
 		
 		int num = 0;
-		
+		 
 		do {
 			System.out.println(menu);
 			System.out.print("번호 선택 : ");
@@ -80,7 +86,7 @@ public class EmpTest {
 
 		} while (num != 9);
 			System.out.println("프로그램 종료");
-
+			
 	}
 
 }
