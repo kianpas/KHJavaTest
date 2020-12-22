@@ -117,7 +117,7 @@ public class Movie {
 		
 		if (release != null)
 			//날짜 읽는 부분
-			info += "\n개봉일 : " + release.get(Calendar.YEAR) + "년 " + release.get(Calendar.MONTH) + "월 "
+			info += "\n개봉일 : " + release.get(Calendar.YEAR) + "년 " + release.get(Calendar.MONTH-1)+  "월 "
 					+ release.get(Calendar.DATE) + "일";
 
 		System.out.println();

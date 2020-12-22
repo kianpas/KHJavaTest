@@ -32,7 +32,7 @@ public class MovieRun {
 		
 		Calendar cal4 = Calendar.getInstance();
 		cal4.set(Calendar.YEAR, 2021);
-		cal4.set(Calendar.MONTH, 12);
+		cal4.set(Calendar.MONTH-1, 12);
 		cal4.set(Calendar.DATE, 22);
 				
 		//생성자별로 객체 생성
