@@ -26,20 +26,20 @@ public class MovieRun {
 		cal2.set(Calendar.DATE, 15);
 		
 		Calendar cal3 = Calendar.getInstance();
-		cal2.set(Calendar.YEAR, 2003);
-		cal2.set(Calendar.MONTH, 11);
-		cal2.set(Calendar.DATE, 5);
+		cal3.set(Calendar.YEAR, 2003);
+		cal3.set(Calendar.MONTH, 11);
+		cal3.set(Calendar.DATE, 5);
 		
 		Calendar cal4 = Calendar.getInstance();
-		cal2.set(Calendar.YEAR, 2021);
-		cal2.set(Calendar.MONTH, 12);
-		cal2.set(Calendar.DATE, 22);
+		cal4.set(Calendar.YEAR, 2021);
+		cal4.set(Calendar.MONTH, 12);
+		cal4.set(Calendar.DATE, 22);
 				
 		//생성자별로 객체 생성
-		Movie fm1 = new Movie("123");
-		Movie fm2 = new Movie("123", "가");
-		Movie fm3 = new Movie("123", "가", casting1);
-		Movie fm4 = new Movie("123", "가", casting1, cal1);
+		Movie fm1 = new Movie("매트릭스1");
+		Movie fm2 = new Movie("매트릭스1", "가");
+		Movie fm3 = new Movie("매트릭스1", "가", casting1);
+		Movie fm4 = new Movie("매트릭스1", "가", casting1, cal1);
 		
 		//출력
 		System.out.println(fm1.information());
@@ -47,30 +47,30 @@ public class MovieRun {
 		System.out.println(fm3.information());
 		System.out.println(fm4.information());
 		
-		Movie sm1 = new Movie("abc");
-		Movie sm2 = new Movie("abc", "나");
-		Movie sm3 = new Movie("abc", "나", casting2);
-		Movie sm4 = new Movie("abc", "나", casting2, cal2);
+		Movie sm1 = new Movie("매트릭스2");
+		Movie sm2 = new Movie("매트릭스2", "나");
+		Movie sm3 = new Movie("매트릭스2", "나", casting2);
+		Movie sm4 = new Movie("매트릭스2", "나", casting2, cal2);
 		
 		System.out.println(sm1.information());
 		System.out.println(sm2.information());
 		System.out.println(sm3.information());
 		System.out.println(sm4.information());
 		
-		Movie tm1 = new Movie("ABC");
-		Movie tm2 = new Movie("ABC", "다");
-		Movie tm3 = new Movie("ABC", "다", casting3);
-		Movie tm4 = new Movie("ABC", "다", casting3, cal3);
+		Movie tm1 = new Movie("매트릭스3");
+		Movie tm2 = new Movie("매트릭스3", "다");
+		Movie tm3 = new Movie("매트릭스3", "다", casting3);
+		Movie tm4 = new Movie("매트릭스3", "다", casting3, cal3);
 		
 		System.out.println(tm1.information());
 		System.out.println(tm2.information());
 		System.out.println(tm3.information());
 		System.out.println(tm4.information());
 		
-		Movie fourm1 = new Movie("!@#$");
-		Movie fourm2 = new Movie("!@#$", "라");
-		Movie fourm3 = new Movie("!@#$", "라", casting4);
-		Movie fourm4 = new Movie("!@#$", "라", casting4, cal4);
+		Movie fourm1 = new Movie("매트릭스4");
+		Movie fourm2 = new Movie("매트릭스4", "라");
+		Movie fourm3 = new Movie("매트릭스4", "라", casting4);
+		Movie fourm4 = new Movie("매트릭스4", "라", casting4, cal4);
 		
 		System.out.println(fourm1.information());
 		System.out.println(fourm2.information());
