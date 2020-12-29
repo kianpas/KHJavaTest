@@ -10,12 +10,25 @@ public class ActionBody {
 		ActionBody ab = new ActionBody();
 
 		Body[] body = new Body[5];
-
-		body[0] = new Head("빨간");
-		body[1] = new Arm();
-		body[2] = new Leg();
-		body[3] = new Head("파란");
-		body[4] = new Leg();
+		
+		//랜덤으로 입력
+		int rnd;
+		for (int i = 0; i < body.length; i++) {
+			rnd = (int) (Math.random() * 3) + 1;
+			if (rnd == 1) {
+				body[i] = new Head("빨간");
+			} else if (rnd == 2) {
+				body[i] = new Arm();
+			} else if (rnd == 3) {
+				body[i] = new Leg();
+			}
+		}
+		
+//		body[0] = new Head("빨간");
+//		body[1] = new Arm();
+//		body[2] = new Leg();
+//		body[3] = new Head("파란");
+//		body[4] = new Leg();
 
 		// 동적바인딩으로 실행
 		for (Body b : body)
