@@ -1,6 +1,8 @@
 package com.api.member.run;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.StringTokenizer;
 
 import com.api.member.model.vo.Member;
@@ -24,6 +26,7 @@ public class Run {
 		//,를 기준으로 자름
 		StringTokenizer tokenmem1 = new StringTokenizer(mem1, ",");
 		
+		
 		Calendar cal = Calendar.getInstance();
 		cal.set(1990, Calendar.SEPTEMBER+1, 5);
 		
@@ -46,7 +49,6 @@ public class Run {
 
 		Calendar cal3 = Calendar.getInstance();
 		cal3.set(1981, Calendar.MARCH + 1, 19);
-
 		
 		mArr[2] = new Member(Integer.parseInt(tokenmem3.nextToken()), tokenmem3.nextToken(),
 				Integer.parseInt(tokenmem3.nextToken()), Integer.parseInt(tokenmem3.nextToken()), cal3);

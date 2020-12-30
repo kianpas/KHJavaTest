@@ -47,15 +47,15 @@ public class CalcDday {
 		int day = sc.nextInt();
 		
 		Calendar dDay = Calendar.getInstance();
-		dDay.set(year, month+1, day);
+		dDay.set(year, month-1, day);
 				
 		Calendar now = Calendar.getInstance();
 		
 		long num1 = dDay.getTimeInMillis();
 		long num2 = now.getTimeInMillis();
 		
-		long diff = (num2 - num1) / 1000 / 60 / 60 / 24;
-		long diff2 = (num1 - num2) / 1000 / 60 / 60 / 24;
+		long diff = (num1 - num2) / 1000 / 60 / 60 / 24;   // 12 30 - 12 20
+		long diff2 = (num2 - num1) / 1000 / 60 / 60 / 24;
 		
 		if(diff == 0)
 			System.out.println("D-Day입니다.");

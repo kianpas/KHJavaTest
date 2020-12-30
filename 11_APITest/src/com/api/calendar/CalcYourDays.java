@@ -19,13 +19,13 @@ public class CalcYourDays {
 		int day = sc.nextInt();
 		
 		Calendar birth = Calendar.getInstance();
-		birth.set(year, month+1, day);
+		birth.set(year, month-1, day);
 				
 		Calendar now = Calendar.getInstance();
-		
+				
 		long num1 = birth.getTimeInMillis();
 		long num2 = now.getTimeInMillis();
-		
+				
 		long diff = (num2 - num1) / 1000 / 60 / 60 / 24;
 		
 		System.out.println("태어난지 " + diff + "일입니다.");

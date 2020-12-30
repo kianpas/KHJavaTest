@@ -5,6 +5,7 @@ import java.util.Calendar;
 public class Member {
 
 	Member[] mArr = new Member[3];
+	
 	private int memberNo;
 	private String memberName;
 	private int height;
