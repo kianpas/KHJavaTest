@@ -60,9 +60,9 @@ public class CalcDday {
 		if(diff == 0)
 			System.out.println("D-Day입니다.");
 		else if (diff > 0)
-			System.out.println("D-"+ diff + "일입니다.");
+			System.out.println("D-"+ diff+1 + "일입니다.");
 		else 
-			System.out.println(diff2 + "일 지났습니다.");
+			System.out.println(diff2+1 + "일 지났습니다.");
 	}	
 
 }

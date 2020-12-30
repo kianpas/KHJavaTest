@@ -28,7 +28,7 @@ public class CalcYourDays {
 				
 		long diff = (num2 - num1) / 1000 / 60 / 60 / 24;
 		
-		System.out.println("태어난지 " + diff + "일입니다.");
+		System.out.println("태어난지 " + diff+1 + "일입니다.");
 		
 	}
 
