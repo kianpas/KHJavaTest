@@ -55,14 +55,15 @@ public class CalcDday {
 		long num2 = now.getTimeInMillis();
 		
 		long diff = (num1 - num2) / 1000 / 60 / 60 / 24;   // 12 30 - 12 20
-		long diff2 = (num2 - num1) / 1000 / 60 / 60 / 24;
+		//long diff2 = (num2 - num1) / 1000 / 60 / 60 / 24;
 		
-		if(diff == 0)
+		//dday는 0 < X < -1
+		if(diff > -1 )
 			System.out.println("D-Day입니다.");
 		else if (diff > 0)
-			System.out.println("D-"+ diff+1 + "일입니다.");
+			System.out.println("D-" + diff + 1 + "일입니다.");
 		else 
-			System.out.println(diff2+1 + "일 지났습니다.");
+			System.out.println(-(int)diff + "일 지났습니다.");
 	}	
 
 }
