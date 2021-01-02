@@ -67,8 +67,8 @@ public class Book implements Serializable {
 	
 	public String toString() {
 		String redate = "도서명 : " + title + " 저자 : " + author + " 가격 : " + price 
-						+ " 출판 날짜 : " + date.get(Calendar.YEAR) + "년 " + date.get(Calendar.MONTH + 1) 
-						+ "월 " + date.get(Calendar.DATE) + "일 출간" + " 할인율 : " + discountRate*100 + "%";
+						+ " 출판 날짜 : " + date.get(Calendar.YEAR) + "년 " + date.get(Calendar.MONTH) 
+						+ "월 " + date.get(Calendar.DATE) + "일 출간" + " 할인율 : " + discountRate + "%";
 		return redate;
 	}
 }

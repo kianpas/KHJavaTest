@@ -39,17 +39,15 @@ public class MyNote {
 					System.out.print("저장할 파일명 : ");
 					String fileName = sc.next();
 					File f = new File(fileName);
-					//입력받은 파일명에 스트링빌더 저장
-					try {
-						BufferedWriter bw = new BufferedWriter(new FileWriter(f));
-
+					//입력받은 파일명에 스트링빌더 저장 //괄호안에 작성 시 bw.close 작성 불필요
+					try (BufferedWriter bw = new BufferedWriter(new FileWriter(f));){
+						
 						bw.write(sb.toString() + "\n");
 						System.out.println(fileName + "에 성공적으로 저장하였습니다.");
 						//문자 날림
 						sc.nextLine();
 						bw.flush();
-						bw.close();
-
+						
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -73,9 +71,8 @@ public class MyNote {
 		System.out.print("열기할 파일명 : ");
 		String fileName = sc.next();
 		File f = new File(fileName);
-		try {
+		try (BufferedReader br = new BufferedReader(new FileReader(f));){
 
-			BufferedReader br = new BufferedReader(new FileReader(f));
 			String data = null;
 			System.out.println(fileName + "을 성공적으로 불러왔습니다.");
 			while ((data = br.readLine()) != null) {
@@ -96,9 +93,7 @@ public class MyNote {
 		String fileName = sc.next();
 		File f = new File(fileName);
 				
-		try {
-			
-			BufferedReader br = new BufferedReader(new FileReader(f));
+		try (BufferedReader br = new BufferedReader(new FileReader(f));){
 			
 			String data = null;
 			System.out.println(fileName + "을 성공적으로 불러왔습니다.");
@@ -130,15 +125,13 @@ public class MyNote {
 				if (ch == 'y') {
 
 					// 입력받은 파일명에 스트링빌더 저장
-					try {
-						BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
-
+					try (BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));){
+					
 						bw.write(sb.toString() + "\n");
 						System.out.println(fileName + "파일의 내용이 변경되었습니다.");
 
 						bw.flush();
-						bw.close();
-
+						
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

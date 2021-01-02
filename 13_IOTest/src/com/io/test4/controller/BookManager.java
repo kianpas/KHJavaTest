@@ -29,20 +29,45 @@ public class BookManager {
 		Book[] book = new Book[5];
 
 		File file = new File("book/books.dat");
-
+		// 객체 스트림생성
 		try (ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
-
-			Book b1 = new Book("소설책", "지은이1", 10000, new GregorianCalendar(2015, 1, 12), 0.1);
-			Book b2 = new Book("교과서", "지은이2", 12000, new GregorianCalendar(2018, 3, 10), 0.15);
-			Book b3 = new Book("사회책", "지은이3", 14000, new GregorianCalendar(2020, 5, 17), 0.2);
-			Book b4 = new Book("역사책", "지은이4", 16000, new GregorianCalendar(2021, 10, 10), 0.25);
-			Book b5 = new Book("동화책", "지은이5", 18000, new GregorianCalendar(2012, 6, 2), 0.3);
-
-			oos.writeObject(b1);
-			oos.writeObject(b2);
-			oos.writeObject(b3);
-			oos.writeObject(b4);
-			oos.writeObject(b5);
+			// 객체 배열에 저장
+			
+			//반복 입력	
+			for(int i = 0; i < book.length; i++) {
+			System.out.print(i + 1 + ". 제목 입력 : ");
+			String title = sc.nextLine();
+			System.out.print(i + 1 + ". 작가 입력 : ");
+			String author = sc.next();
+			System.out.print(i + 1 + ". 가격 입력 : ");
+			int price = sc.nextInt();
+			System.out.print(i + 1 + ". 연도 입력 (ex:20210101) : ");
+			
+			//20210123
+			String releaseDate = sc.next();
+			int year = Integer.parseInt(releaseDate.substring(0, 4));
+			int month = Integer.parseInt(releaseDate.substring(4, 6));
+			int date = Integer.parseInt(releaseDate.substring(6, 7));
+			
+			System.out.print(i + 1 + ". 할인률 입력 : ");
+			double discount = sc.nextDouble();
+			System.out.println();
+			sc.nextLine();
+			
+			book[i] = new Book(title, author, price, new GregorianCalendar(year, month, date), discount);
+			}
+			
+			//직접 입력
+//			book[0] = new Book("소설책", "지은이1", 10000, new GregorianCalendar(2015, 1, 12), 0.1);
+//			book[1] = new Book("교과서", "지은이2", 12000, new GregorianCalendar(2018, 3, 10), 0.15);
+//			book[2] = new Book("사회책", "지은이3", 14000, new GregorianCalendar(2020, 5, 17), 0.2);
+//			book[3] = new Book("역사책", "지은이4", 16000, new GregorianCalendar(2021, 10, 10), 0.25);
+//			book[4] = new Book("동화책", "지은이5", 18000, new GregorianCalendar(2012, 6, 2), 0.3);
+			
+			//입력정보 쓰기
+			for (int i = 0; i < book.length; i++) {
+				oos.writeObject(book[i]);
+			}
 
 			System.out.println("book.dat에 저장 완료!");
 
@@ -51,7 +76,7 @@ public class BookManager {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void fileRead() {
 		
 		Book[] book = new Book[10];
@@ -68,13 +93,9 @@ public class BookManager {
 		} catch (EOFException e) {
 			System.out.println("books.dat 읽기 완료!");
 
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-
+		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 
 	}
-}	
-	
+}
