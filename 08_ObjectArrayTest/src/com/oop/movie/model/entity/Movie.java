@@ -76,16 +76,17 @@ public class Movie {
 	}
 
 	public Movie(String movieTitle, String director) {
-		
-		this.movieTitle = movieTitle;
+		this(movieTitle);
+		//this.movieTitle = movieTitle;
 		this.director = director;
 
 	}
 
 	public Movie(String movieTitle, String director, String[] casting) {
 
-		this.movieTitle = movieTitle;
-		this.director = director;
+		this(movieTitle, director);
+//		this.movieTitle = movieTitle;
+//		this.director = director;
 		this.casting = casting;
 
 	}
@@ -107,7 +108,7 @@ public class Movie {
 			info += "\n출연배우 : ";
 
 			for (int i = 0; i < casting.length; i++) {
-				if (casting[i] == casting[4]) {
+				if (casting[i] == casting[casting.length-1]) {
 					info += casting[i];
 				} else {
 					info += casting[i] + ", ";
@@ -117,7 +118,7 @@ public class Movie {
 		
 		if (release != null)
 			//날짜 읽는 부분
-			info += "\n개봉일 : " + release.get(Calendar.YEAR) + "년 " + release.get(Calendar.MONTH-1)+  "월 "
+			info += "\n개봉일 : " + release.get(Calendar.YEAR) + "년 " + (release.get(Calendar.MONTH)+1)+  "월 "
 					+ release.get(Calendar.DATE) + "일";
 
 		System.out.println();

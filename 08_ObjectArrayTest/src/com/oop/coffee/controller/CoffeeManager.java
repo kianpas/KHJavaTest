@@ -54,7 +54,7 @@ public class CoffeeManager {
 	//출력
 	public void printCoffee() {
 		
-		System.out.println("    <세계 3대 커피>" + "\n-----------------" + "\n원산지        지역" + "\n-----------------");
+		System.out.println("   <세계 3대 커피>" + "\n-----------------" + "\n원산지        지역" + "\n-----------------");
 		//향상된 for문
 		for (Coffee p : arr)
 			p.printCoffee();

@@ -16,9 +16,9 @@ public class MovieRun {
 		
 		//날짜 지정
 		Calendar cal1 = Calendar.getInstance();
-		cal1.set(Calendar.YEAR, 1999);
-		cal1.set(Calendar.MONTH, 5);
-		cal1.set(Calendar.DATE, 15);
+		cal1.set(1999, Calendar.MAY, 15);
+//		cal1.set(Calendar.MONTH, 5);
+//		cal1.set(Calendar.DATE, 15);
 		
 		Calendar cal2 = Calendar.getInstance();
 		cal2.set(Calendar.YEAR, 2003);
@@ -32,7 +32,7 @@ public class MovieRun {
 		
 		Calendar cal4 = Calendar.getInstance();
 		cal4.set(Calendar.YEAR, 2021);
-		cal4.set(Calendar.MONTH-1, 12);
+		cal4.set(Calendar.MONTH, Calendar.DECEMBER);
 		cal4.set(Calendar.DATE, 22);
 				
 		//생성자별로 객체 생성
@@ -42,7 +42,9 @@ public class MovieRun {
 		Movie fm4 = new Movie("매트릭스1", "가", casting1, cal1);
 		
 		//출력
-		System.out.println(fm1.information());
+		String a = fm1.information();
+		System.out.println(a);
+		//System.out.println(fm1.information()); //둘다 가능
 		System.out.println(fm2.information());
 		System.out.println(fm3.information());
 		System.out.println(fm4.information());
