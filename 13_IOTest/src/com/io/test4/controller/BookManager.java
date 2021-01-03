@@ -54,7 +54,7 @@ public class BookManager {
 				System.out.println();
 				sc.nextLine();
 
-				book[0] = new Book(title, author, price, new GregorianCalendar(year, month, date), discount);
+				book[i] = new Book(title, author, price, new GregorianCalendar(year, month, date), discount);
 			}
 			
 			//직접 입력
