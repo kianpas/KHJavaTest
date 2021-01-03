@@ -34,27 +34,27 @@ public class BookManager {
 			// 객체 배열에 저장
 			
 			//반복 입력	
-			for(int i = 0; i < book.length; i++) {
-			System.out.print(i + 1 + ". 제목 입력 : ");
-			String title = sc.nextLine();
-			System.out.print(i + 1 + ". 작가 입력 : ");
-			String author = sc.next();
-			System.out.print(i + 1 + ". 가격 입력 : ");
-			int price = sc.nextInt();
-			System.out.print(i + 1 + ". 연도 입력 (ex:20210101) : ");
-			
-			//20210123
-			String releaseDate = sc.next();
-			int year = Integer.parseInt(releaseDate.substring(0, 4));
-			int month = Integer.parseInt(releaseDate.substring(4, 6));
-			int date = Integer.parseInt(releaseDate.substring(6, 7));
-			
-			System.out.print(i + 1 + ". 할인률 입력 : ");
-			double discount = sc.nextDouble();
-			System.out.println();
-			sc.nextLine();
-			
-			book[i] = new Book(title, author, price, new GregorianCalendar(year, month, date), discount);
+			for (int i = 0; i < book.length; i++) {
+				System.out.print(i + 1 + ". 제목 입력 : ");
+				String title = sc.nextLine();
+				System.out.print(i + 1 + ". 작가 입력 : ");
+				String author = sc.next();
+				System.out.print(i + 1 + ". 가격 입력 : ");
+				int price = sc.nextInt();
+				System.out.print(i + 1 + ". 연도 입력 (ex:20210101) : ");
+
+				// 20210123
+				String releaseDate = sc.next();
+				int year = Integer.parseInt(releaseDate.substring(0, 4));
+				int month = Integer.parseInt(releaseDate.substring(4, 6));
+				int date = Integer.parseInt(releaseDate.substring(6, 8));
+
+				System.out.print(i + 1 + ". 할인률 입력 : ");
+				double discount = sc.nextDouble();
+				System.out.println();
+				sc.nextLine();
+
+				book[0] = new Book(title, author, price, new GregorianCalendar(year, month, date), discount);
 			}
 			
 			//직접 입력
@@ -68,8 +68,9 @@ public class BookManager {
 			for (int i = 0; i < book.length; i++) {
 				oos.writeObject(book[i]);
 			}
-
+			
 			System.out.println("book.dat에 저장 완료!");
+			
 
 		} catch (IOException e) {
 
